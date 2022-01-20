@@ -1,6 +1,5 @@
 class SkylabArray {
   element;
-
   lenghtArray;
 
   lenght(element) {
@@ -32,7 +31,6 @@ class SkylabArray {
     return [];
   }
 }
-const newArray = new SkylabArray();
 
 describe("Given a SkylabArray class with metod length", () => {
   describe("When it recives nothing", () => {
@@ -128,11 +126,11 @@ describe("Given a SkylabArray class with metod filter", () => {
 describe("Given a SkylabArray class with metod map", () => {
   describe("When it recives []", () => {
     test("Then it should return []", () => {
-      const array = [];
+      const arrayValue = [];
       const newArray = new SkylabArray();
       const returnValue = [];
 
-      const arrayArray = newArray.map();
+      const arrayArray = newArray.map(arrayValue);
 
       expect(arrayArray).toStrictEqual(returnValue);
     });
