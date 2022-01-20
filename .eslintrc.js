@@ -13,5 +13,10 @@ module.exports = {
     "no-restricted-syntax": "off",
     "no-debugger": "off",
     "no-console": "off",
+    "lines-between-class-members": [
+      "error",
+      "always",
+      { exceptAfterSingleLine: true },
+    ],
   },
 };
