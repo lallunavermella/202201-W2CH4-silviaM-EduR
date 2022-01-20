@@ -33,7 +33,6 @@ class SkylabArray {
   }
 }
 const newArray = new SkylabArray();
-console.log(newArray);
 
 describe("Given a SkylabArray class with metod length", () => {
   describe("When it recives nothing", () => {
@@ -41,14 +40,23 @@ describe("Given a SkylabArray class with metod length", () => {
       const element = null;
       const newArray = new SkylabArray();
 
-      expect(newArray.lenght(element)).toBe(0);
+      const returnValue = 0;
+
+      const arrayLength = newArray.lenght(element);
+
+      expect(arrayLength).toBe(returnValue);
     });
   });
   describe("When it recives an element", () => {
     test("Then it should return '1'", () => {
       const element = "element";
       const newArray = new SkylabArray();
-      expect(newArray.lenght(element)).toBe(1);
+
+      const returnValue = 1;
+
+      const arrayLength = newArray.lenght(element);
+
+      expect(arrayLength).toBe(returnValue);
     });
   });
 });
@@ -58,7 +66,11 @@ describe("Given a SkylabArray class with metod push", () => {
       const element = "hola";
       const newArray = new SkylabArray();
 
-      expect(newArray.push(element)).toBe(1);
+      const returnValue = 1;
+
+      const arrayPush = newArray.push(element);
+
+      expect(arrayPush).toBe(returnValue);
     });
   });
   describe("When it recives '1'", () => {
@@ -66,7 +78,10 @@ describe("Given a SkylabArray class with metod push", () => {
       const element = "1";
       const newArray = new SkylabArray();
 
-      expect(newArray.push(element)).toBe(1);
+      const returnValue = 1;
+
+      const arrayPush = newArray.push(element);
+      expect(arrayPush).toBe(returnValue);
     });
   });
 });
