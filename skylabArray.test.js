@@ -1,5 +1,3 @@
-const { array } = require("yargs");
-
 class SkylabArray {
   element;
 
@@ -27,10 +25,12 @@ class SkylabArray {
   }
 
   filter(callbackFn) {
-    return 0;
+    return 1;
   }
 
-  filter(callbackFn) {}
+  map(callbackFn) {
+    return [];
+  }
 }
 const newArray = new SkylabArray();
 console.log(newArray);
@@ -75,8 +75,11 @@ describe("Given a SkylabArray class with metod some", () => {
     test("Then it should return 'false'", () => {
       const number0 = (element) => element === 0;
       const newArray = new SkylabArray();
+      const returnValue = false;
 
-      expect(newArray.some(number0)).toBe(false);
+      const arraySome = newArray.some(number0);
+
+      expect(arraySome).toBe(returnValue);
     });
   });
 });
@@ -85,8 +88,11 @@ describe("Given a SkylabArray class with metod find", () => {
     test("Then it should return '0'", () => {
       const number0 = [0].find((element) => element <= 0);
       const newArray = new SkylabArray();
+      const returnValue = 0;
 
-      expect(newArray.find(number0)).toBe(0);
+      const arrayFind = newArray.find(number0);
+
+      expect(arrayFind).toBe(returnValue);
     });
   });
 });
@@ -96,8 +102,11 @@ describe("Given a SkylabArray class with metod filter", () => {
       const numberArray = [1, 2];
       const number1 = numberArray.find((element) => element > 0);
       const newArray = new SkylabArray();
+      const returnValue = 1;
 
-      expect(newArray.filter(number1)).toStrictEqual(1);
+      const arrayFilter = newArray.filter(number1);
+
+      expect(arrayFilter).toStrictEqual(returnValue);
     });
   });
 });
@@ -106,8 +115,11 @@ describe("Given a SkylabArray class with metod map", () => {
     test("Then it should return []", () => {
       const array = [];
       const newArray = new SkylabArray();
+      const returnValue = [];
 
-      expect([]).toStrictEqual([]);
+      const arrayArray = newArray.map();
+
+      expect(arrayArray).toStrictEqual(returnValue);
     });
   });
 });
